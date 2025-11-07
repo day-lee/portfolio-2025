@@ -2,6 +2,14 @@ import Image from "next/image";
 
 import fallback from "../public/fallback.png";  
 
+/*
+css styles, animation 
+content
+button links
+
+
+*/
+
 export default function Home() {
   return (
   <div className="min-h-screen bg-gray-700">
@@ -13,9 +21,17 @@ export default function Home() {
     </ul>
   </nav>
   <div className="flex flex-col items-center justify-center max-w-4xl mx-auto p-4 space-y-8">
-    <section className="bg-pink-400">
-      <h1 className="text-5xl sm:text-6xl mb-4">Hero title</h1>
-      <p className="">Hero description - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.</p>
+    <section className="bg-white">
+      <h1 className="blur-text w-full text-5xl sm:text-7xl font-extrabold mb-4 flex flex-wrap">
+        <span className="mr-4 animate-fade-right animate-delay-100 animate-once">Hi,</span>
+        <span className="mr-4 animate-fade-right animate-delay-200 animate-once">I'm</span> 
+        <span className="mr-4 animate-fade-right animate-delay-300 animate-once">Dayeon</span> 
+        <span className="animate-wiggle-more animate-delay-400 animate-twice">👋</span> 
+      </h1>
+      <p className="text-2xl">
+        <span className="text-blue-800 opacity-100"> Hero description</span> 
+         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do incididunt ut labore et dolore.
+        <span className="text-blue-800 opacity-100"> eiusmod tempor </span>ullamco laboris nisi.</p>
     </section>
     <section className="w-full bg-amber-400">
      <h2 className="text-3xl sm:text-4xl mb-4">about</h2>
