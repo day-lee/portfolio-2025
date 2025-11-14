@@ -1,9 +1,6 @@
 import Image from "next/image";
 
-import fallback from "../public/fallback.png";  
 import cvIcon from "../public/cv-icon.png";
-import kmooc from "../public/kmooc.png";
-
 
 export default function Home() {
   return (
@@ -151,8 +148,8 @@ export default function Home() {
           </div>
         </div> 
         <div className="rounded-lg border border-solid">
-            <div className="relative w-full overflow-hidden rounded-t-lg bg-black pb-[56.25%]">
-              <iframe className="absolute inset-0 h-full w-full border-0" src="https://www.youtube.com/embed/Gd6XfAiI7pc?autoplay=1&mute=1&si=tuk_-19Q5iXXK6tF&amp;controls=0&amp;start=228" 
+            <div className="relative w-full overflow-hidden rounded-t-lg bg-black pb-[54.40%]">
+              <iframe className="absolute inset-0 h-full w-full border-0" src="https://www.youtube.com/embed/vvic1iLyTqY?autoplay=1&mute=1&si=tuk_-19Q5iXXK6tF&amp;controls=0&amp;" 
                   title="YouTube solosync video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                   allowFullScreen>
               </iframe>
@@ -280,7 +277,8 @@ export default function Home() {
       <div className="flex flex-col gap-8 mb-8">
         <div className="border border-black rounded-md p-4"> 
           <div className="flex items-center justify-between">
-            <p className="text-xl font-bold text-cyan-700">Code Your Future <span className="text-lg text-gray-600"> - Software Engineer / Programming Teaching Assistant</span></p>
+            <div className="rounded-full border-2 border-r-red-400 text-red-700 py-1 px-1 animate-wiggle animate-infinite">CYF</div>
+            <p className="text-xl font-bold text-cyan-700">  Code Your Future <span className="text-lg text-gray-600"> - Software Engineer / Programming Teaching Assistant</span></p>
             <span> London, UK 2025 </span>
           </div>
             <div className="text-[16px]">
