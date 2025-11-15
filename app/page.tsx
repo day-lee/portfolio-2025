@@ -1,8 +1,21 @@
+'use client';
+import { useState } from 'react';
 import Image from "next/image";
 
 import cvIcon from "../public/cv-icon.png";
+import cyfLogo from "../public/cyf-logo.jpg";
+import uniLogo from "../public/uniLogo.svg";
+import bbcLogo from "../public/bbc-logo.jpeg";
+import britaLogo from "../public/britaLogo.jpg";
+import appleLogo from "../public/appleLogo.png";
+import bbc from "../public/bbc.jpg";
+import brita from "../public/brita.jpg";
+import apple from "../public/apple.jpg";
+import cyf from "../public/cyf.jpg";
+import uni from "../public/uni.jpg";
 
 export default function Home() {
+  const [hoveredId, setHoveredId] = useState<string | null>(null);
   return (
   <div className="min-h-screen bg-white">
   <nav className="top-0 left-0 w-full mt-4 z-50 p-4 pb-16">
@@ -23,20 +36,20 @@ export default function Home() {
       </h1>
       <p className="text-2xl text-gray-700">
         <span className="text-cyan-700 font-semibold"> Full-stack Software Engineer </span> 
-        <span className="text-black">specialising in high-impact optimisation, serving 10,000+ monthly active users, bringing sales and marketing perspective to technical solutions.</span>
+        <span className="text-black">optimising user experiences and system performance for 10,000+ monthly active users, bringing sales and marketing perspective to technical solutions.</span>
       </p>
     </section>
     <section className="w-full bg-white mb-16">
      <h2 className="text-2xl font-semibold mb-4">About</h2>
     <div className="text-xl"> 
        <span className="text-gray-700">I’m based in London and currently work at </span>
-       <span className="text-black font-semibold"> CodeYourFuture as a Software Engineer. </span> 
+       <span className="text-black font-semibold"> Code Your Future as a Software Engineer. </span> 
        <p className="text-gray-700 block"> This year, <span className="text-cyan-700 font-semibold"> I won a hackathon</span>,
         which made me <span className="text-cyan-700 font-semibold">realise how enjoyable it is to bring ideas to life</span> and <span className="text-cyan-700 font-semibold">to work in a diverse team. </span> </p>
        <span className="text-gray-700 inline-block"> My current tech stack includes </span> 
-       <span className="text-black font-semibold"> TypeScript, React, Next.js, Tailwind CSS, and Supabase. </span>
+       <span className="text-black font-semibold"> TypeScript, JavaScript, React, Next.js, Node.js, Jest, PostgreSQL, MongoDB, Tailwind CSS and Supabase. </span>
        <span className="text-gray-700 inline-block">In addition to frontend work, I have experience with </span>
-      <span className="text-black font-semibold"> MySQL, PostgreSQL, MongoDB, AWS, Python, Django, and Docker.</span>
+      <span className="text-black font-semibold"> MySQL, AWS, Python, Django, and Docker.</span>
     </div>
     </section>
     <section className="w-full bg-white mb-32">
@@ -74,10 +87,14 @@ export default function Home() {
           <Image src={fallback} alt="MySQL" width={50} height={50} />
            <p>MySQL</p>
         </div> */}
-        <div className="flex flex-col items-center text-sm text-gray-600 gap-4">
+        {/* <div className="flex flex-col items-center text-sm text-gray-600 gap-4">
           <img className="w-12 h-12 object-contain" alt="Tailwind CSS" loading="lazy" width="48" height="48" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Tailwind_CSS_Logo.svg/1200px-Tailwind_CSS_Logo.svg.png" />
            <p>Tailwind CSS</p>
-        </div>
+        </div> */}
+        <div className="flex flex-col items-center text-sm text-gray-600 gap-4">
+          <img className="w-12 h-12 object-contain" alt="Node.js" loading="lazy" width="48" height="48" src="https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/nodedotjs.svg" />
+           <p>Node.js</p>
+        </div>        
         <div className="flex flex-col items-center text-sm text-gray-600 gap-4">
           <img className="w-12 h-12 object-contain" alt="Next.js" loading="lazy" width="48" height="48" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" />
            <p>PostgreSQL</p>
@@ -115,7 +132,7 @@ export default function Home() {
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <div className="rounded-lg border border-solid">
             <div className="relative w-full overflow-hidden rounded-t-lg bg-black pb-[56.25%]">
-              <iframe className="absolute inset-0 h-full w-full border-0" src="https://www.youtube.com/embed/Gd6XfAiI7pc?autoplay=1&mute=1&si=tuk_-19Q5iXXK6tF&amp;controls=0&amp;start=228" 
+              <iframe className="absolute inset-0 h-full w-full border-0" src="https://www.youtube.com/embed/Gd6XfAiI7pc?loop=1&playlist=Gd6XfAiI7pc&autoplay=1&mute=1&si=tuk_-19Q5iXXK6tF&amp;controls=0&amp;start=228" 
                   title="YouTube solosync video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                   allowFullScreen>
               </iframe>
@@ -127,7 +144,7 @@ export default function Home() {
             </div>
             <div className="font-sans text-[16px] max-w-full h-36">
              <div className="mb-1"> <span className="font-bold"> • 1st place </span> in the topic challenge and <span className="font-bold">3rd</span> overall out of 24 teams at HuddleHive's WIT Hackathon.</div>
-             <div className="mb-1"> • Reducing No-shows in the events industry by introducing <span className="font-bold">gamification</span> and <span className="font-bold">accountability buddy</span>. </div>
+             <div className="mb-1"> • Reducing No-shows in the events industry by introducing <span className="font-bold">gamification</span> and <span className="font-bold">accountability buddy chat</span>. </div>
              <div className="mb-1"> • I  developed an <span className="font-bold">MVP  for the ice-breaking chat feature</span> using React.</div>
             </div>
             </div>
@@ -149,17 +166,16 @@ export default function Home() {
         </div> 
         <div className="rounded-lg border border-solid">
             <div className="relative w-full overflow-hidden rounded-t-lg bg-black pb-[54.40%]">
-              <iframe className="absolute inset-0 h-full w-full border-0" src="https://www.youtube.com/embed/vvic1iLyTqY?autoplay=1&mute=1&si=tuk_-19Q5iXXK6tF&amp;controls=0&amp;" 
+              <iframe className="absolute inset-0 h-full w-full border-0" src="https://www.youtube.com/embed/vvic1iLyTqY?loop=1&playlist=vvic1iLyTqY&autoplay=1&mute=1&si=tuk_-19Q5iXXK6tF&amp;controls=0&amp;" 
                   title="YouTube solosync video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                   allowFullScreen>
               </iframe>
             </div>
-          <div className="mx-2 my-4 p-4">
+          <div className="mx-2 my-4 p-4 pt-6">
             <div className="flex justify-between items-center mb-4">
               <h3 className="text-xl font-bold text-gray-900">Code Your Future</h3>
               <p className="mr-4">2025</p>
             </div>
-            
             <div className="font-sans text-[16px] max-w-full h-36">
               <div className="mb-1">• Code Your Future is a UK-based charity that provides free coding education to disadvantaged groups </div>
               <div className="mb-1"> • I contributed to in-person sessions, providing <span className="font-bold">pair programming support</span>, and worked as a software engineer <span className="font-bold">to build and maintain applications and a dashboard website</span> for admin staff.</div>  
@@ -188,8 +204,8 @@ export default function Home() {
         </div>         
         <div className="rounded-lg border border-solid">
             <div className="relative w-full overflow-hidden rounded-t-lg bg-black pb-[54.15%]">
-              <iframe className="absolute inset-0 rounded-t-md h-full w-full border-0" src="https://www.youtube.com/embed/veqeTyMyCUw?autoplay=1&mute=1&si=tuk_-19Q5iXXK6tF&amp;controls=0&amp;" 
-                  title="YouTube solosync video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              <iframe className="absolute inset-0 rounded-t-md h-full w-full border-0" src="https://www.youtube.com/embed/veqeTyMyCUw?loop=1&playlist=veqeTyMyCUw&autoplay=1&mute=1&si=tuk_-19Q5iXXK6tF&amp;controls=0&amp;" 
+                  title="YouTube recipe project video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                   allowFullScreen>
               </iframe>
             </div>
@@ -230,8 +246,8 @@ export default function Home() {
         </div> 
         <div className="rounded-lg border border-solid">
             <div className="relative w-full overflow-hidden rounded-t-lg bg-black pb-[56.25%]">
-              <iframe className="absolute inset-0 h-full w-full border-0" src="https://www.youtube.com/embed/Q4ix9751PTQ?autoplay=1&mute=1&si=tuk_-19Q5iXXK6tF&amp;controls=0&amp;start=128" 
-                  title="YouTube solosync video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              <iframe className="absolute inset-0 h-full w-full border-0" src="https://www.youtube.com/embed/Q4ix9751PTQ?loop=1&playlist=Q4ix9751PTQ&autoplay=1&mute=1&si=tuk_-19Q5iXXK6tF&amp;controls=0&amp;start=128" 
+                  title="YouTube kmooc video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                   allowFullScreen>
               </iframe>
             </div>          
@@ -245,7 +261,7 @@ export default function Home() {
                  • K-MOOC is South Korea's national platform for free online courses.
               </div>
               <div className="mb-1"> 
-                 • I maintained a website serving over 10,000 monthly average users by ensuring  <span className="font-bold">optimized database performance and system-wide troubleshooting.</span>
+                 • I maintained a website serving over 10,000 monthly average users by ensuring  <span className="font-bold">optimised database performance and system-wide troubleshooting.</span>
               </div>
             </div>
              </div>
@@ -256,6 +272,7 @@ export default function Home() {
             <div className="flex gap-2 mt-4 flex-wrap">
               <div className="flex items-center bg-gray-100 py-1 px-2 h-6 rounded-md text-gray-700">Python</div>
               <div className="flex items-center bg-gray-100 py-1 px-2 h-6 rounded-md text-gray-700">Django</div>
+              <div className="flex items-center bg-gray-100 py-1 px-2 h-6 rounded-md text-gray-700">JavaScript</div>
               <div className="flex items-center bg-gray-100 py-1 px-2 h-6 rounded-md text-gray-700">OpenEdx</div>
               <div className="flex items-center bg-gray-100 py-1 px-2 h-6 rounded-md text-gray-700">MySql</div>
               <div className="flex items-center bg-gray-100 py-1 px-2 h-6 rounded-md text-gray-700">MongoDB</div>
@@ -267,7 +284,6 @@ export default function Home() {
           </div>
         </div>         
       </div>
-      
     </section>
     <section className="w-full">
       <div className="flex flex-col justify-center items-center mb-8 gap-4">
@@ -276,51 +292,121 @@ export default function Home() {
       </div>
       <div className="flex flex-col gap-8 mb-8">
         <div className="border border-black rounded-md p-4"> 
-          <div className="flex items-center justify-between">
-            <div className="rounded-full border-2 border-r-red-400 text-red-700 py-1 px-1 animate-wiggle animate-infinite">CYF</div>
-            <p className="text-xl font-bold text-cyan-700">  Code Your Future <span className="text-lg text-gray-600"> - Software Engineer / Programming Teaching Assistant</span></p>
-            <span> London, UK 2025 </span>
+          <div className="flex flex-col sm:flex-row items-center justify-between mb-2">
+            <div className='relative flex items-center gap-1 cursor-pointer'   
+                  onMouseEnter={() => {setHoveredId("cyf");}} onMouseLeave={() => {setHoveredId(null);}}>
+                    <div className='absolute -top-6 -left-6 text-sm text-red-600 border animate-wiggle bg-white animate-infinite px-1 -rotate-10 font-semibold'>Hover over!</div>
+            <div className='relative'>
+              <div className="rounded-full border-2 h-8 w-8 mr-2 border-amber-400 text-red-700 py-1 px-1 animate-pulse">
+                <Image className='rounded-full' src={cyfLogo} alt="Code Your Future Logo" priority={true} width={25} height={25} />
+              </div>
+            </div>
+            <div className={`absolute left-0 top-0 transform -translate-x-2 transition-all duration-300 z-50 rounded-md bg-white h-104 pt-4 px-4 shadow-2xl ${hoveredId === "cyf" ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}>
+                <Image className='rounded-md' src={cyf} alt="code your future experience" priority={true} width={300} height={300} />
+                <div className='text-center mt-4 text-lg font-mono'> <p>CYF Tech Products </p><p>2025 Meet-up </p></div>  
+            </div>
+            <div className='flex flex-col sm:flex-row font-bold'>
+              <p className="text-xl  text-cyan-700"> Code Your Future <span className="text-lg text-gray-600"> - Software Engineer / Programming Teaching Assistant</span></p> 
+            </div>
+            </div>
+            <span className='mt-2 sm:mt-0'> London, UK 2025 </span>
           </div>
-            <div className="text-[16px]">
+            <div className="ml-2 text-[16px]">
               <p>After moving to London, 
                 I joined a larger team where I enjoyed <span className="font-bold">building dashboard website, resolving merge conflicts, and having meaningful discussions about web development.</span>
               </p>
             </div>
         </div>
         <div className="border border-black rounded-md p-4"> 
-          <div className="flex items-center justify-between">
-            <h3 className="text-xl font-bold text-cyan-700">Korea National Open University <span className="text-lg text-gray-600"> - Computer Science Student</span></h3>
-            <span> Seoul, Korea 2022 - 2024 </span>
+            <div className="flex flex-col sm:flex-row items-center justify-between mb-2">
+              <div className='relative flex items-center gap-1 cursor-pointer'
+                    onMouseEnter={() => {setHoveredId("uni");}} onMouseLeave={() => {setHoveredId(null);}}>
+              <div className='relative'>
+                <div className="rounded-full border-2 h-8 w-8 mr-2 border-amber-400 text-red-700 py-1 px-1 animate-pulse">
+                  <Image className='rounded-full' src={uniLogo} alt="Korea National Open University Logo" priority={true} width={25} height={25} />
+                </div>
+              </div>
+              <div className={`absolute left-0 top-0 transform -translate-x-2 transition-all duration-300 z-50 rounded-md bg-white h-104 pt-4 px-4 shadow-2xl ${hoveredId === "uni" ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}>
+                  <Image className='rounded-md' src={uni} alt="university certificate" priority={true} width={300} height={300} />
+                  <div className='text-center mt-4 text-sm font-mono'> <p>Certificate of Academic Scholarship</p><p> from Korea National Open University </p></div>  
+              </div>
+              <div className='flex flex-col sm:flex-row font-bold'>
+                <p className="text-xl text-cyan-700">  Korea National Open University  <span className="text-lg text-gray-600"> - Computer Science Student</span></p> 
+              </div>
+            </div>
+            <span className='mt-2 sm:mt-0'> Seoul, Korea 2022 - 2024 </span>
           </div>
-            <div className="text-[16px]"><p>I established a <span className="font-bold">solid foundation by studying computer science</span> fundamentals.</p></div>
-            <p>Modules: Data Structures and Algorithms, Computer Architecture and Operating Systems, Database Systems, Computer Security, Computer Networking </p>
+            <div className="ml-2 text-[16px]"><p>I established a <span className="font-bold">solid foundation by studying computer science</span> fundamentals.</p></div>
+            <p className='ml-2'>Modules: Data Structures and Algorithms, Computer Architecture and Operating Systems, Database Systems, Computer Security, Computer Networking </p>
         </div>        
         <div className="border border-black rounded-md p-4"> 
-          <div className="flex items-center justify-between">
-            <h3 className="text-xl font-bold text-cyan-700">Bubblecon <span className="text-lg text-gray-600"> - Software Engineer</span></h3>
+          <div className="flex flex-col sm:flex-row items-center justify-between mb-2">
+            <div className='relative flex items-center gap-1 cursor-pointer' 
+                onMouseEnter={() => {setHoveredId("bbc");}} onMouseLeave={() => {setHoveredId(null);}} >
+            <div className='relative'>
+              <div className="rounded-full border-2 h-8 w-8 mr-2 border-amber-400 text-red-700 py-1 px-1 animate-pulse">
+                <Image className='rounded-full' src={bbcLogo} alt="Bubblecon Logo" priority={true} width={25} height={25} />
+              </div>
+            </div>
+            <div className={`absolute left-0 top-0 transform -translate-x-2 transition-all duration-300 z-50 rounded-md bg-white h-108 pt-4 px-4 shadow-2xl ${hoveredId === "bbc" ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}>
+                <Image className='rounded-md' src={bbc} alt="bubblecon" priority={true} width={300} height={300} />
+                <div className='text-center mt-4 text-lg font-mono'> <p>Working hard :)</p> <p className='text-sm'>@ Bubblecon Seoul office</p> </div>  
+            </div>
+              <div className='flex flex-col sm:flex-row font-bold'>
+                <p className="text-xl  text-cyan-700"> Bubblecon <span className="text-lg text-gray-600"> - Software Engineer</span></p> 
+              </div>
+            </div>
             <span> Seoul, Korea 2021 - 2024 </span>
           </div>
-            <div className="text-[16px]">
+            <div className="ml-2 text-[16px]">
                <p>As a self-taught developer, I switched my career from digital marketing to software engineering. </p> 
               <p> At Bubblecon, I explored <span className="font-bold">web development topics from frontend to backend engineering</span> through the K-MOOC website. This broad exposure was invaluable in shaping my tech expertise. </p>
             </div>
         </div>
         <div className="border border-black rounded-md p-4"> 
-          <div className="flex items-center justify-between">
-            <h3 className="text-xl font-bold text-cyan-700">Asiance & Brita Group<span className="text-lg text-gray-600"> - Digital Marketer</span> </h3>
-            <span> Seoul, Korea 2019 - 2021 </span>
-          </div>
-            <div className="text-[16px]"> 
+          <div className="flex flex-col sm:flex-row items-center justify-between mb-2">
+            <div className='relative flex items-center gap-1 cursor-pointer'  
+            onMouseEnter={() => {setHoveredId("brita");}} onMouseLeave={() => {setHoveredId(null);}}>
+            <div className='relative'>
+              <div className="rounded-full border-2 h-8 w-8 mr-2 border-amber-400 text-red-700 py-1 px-1 animate-pulse">
+                <Image className='rounded-full' src={britaLogo} alt="Brita Logo" priority={true} width={25} height={25} />
+              </div>
+            </div>
+            <div className={`absolute left-0 top-0 transform -translate-x-2 transition-all duration-300 z-50 rounded-md bg-white h-108 pt-4 px-4 shadow-2xl ${hoveredId === "brita" ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}>
+                <Image className='rounded-md' src={brita} alt="brita" priority={true} width={300} height={300} />
+                <div className='text-center mt-4 text-lg font-mono'> <p>Brita Korea Annual Conference </p> <p>Sales Day </p> </div>  
+            </div>
+              <div className='flex flex-col sm:flex-row font-bold'>
+                <p className="text-xl  text-cyan-700">   Asiance & Brita Group <span className="text-lg text-gray-600">  - Digital Marketer</span></p> 
+              </div>
+            </div>
+            <span>Seoul, Korea 2019 - 2021</span>
+          </div>            
+            <div className="ml-2 text-[16px]"> 
             <p>In the world of digital marketing, I discovered the power of Excel functions and pivot tables, which later helped me understand <span className="font-bold">programming functions and databases. </span>
                I started <span className="font-bold">learning Python to automate repetitive data collection tasks using Beautiful Soup and Selenium.</span></p>
             </div>
         </div> 
         <div className="border border-black rounded-md p-4"> 
-          <div className="flex items-center justify-between">
-            <h3 className="text-xl font-bold text-cyan-700">Apple Store London<span className="text-lg text-gray-600"> - Sales Specialist</span></h3>
-            <span> London, UK 2018 </span>
+          <div className="flex flex-col sm:flex-row items-center justify-between mb-2">
+            <div className='relative flex items-center gap-1 cursor-pointer' 
+              onMouseEnter={() => {setHoveredId("apple");}} onMouseLeave={() => {setHoveredId(null);}}>
+            <div className='relative'>
+              <div className="rounded-full border-2 h-8 w-8 mr-2 border-amber-400 text-red-700 py-1 px-1 animate-pulse">
+                <Image className='rounded-full' src={appleLogo} alt="Apple Logo" priority={true} width={25} height={25} />
+              </div>
+            </div>
+            <div className={`absolute left-0 top-0 transform -translate-x-2 transition-all duration-300 z-50 rounded-md bg-white h-108 pt-4 px-4 shadow-2xl ${hoveredId === "apple" ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}>
+                <Image className='rounded-md' src={apple} alt="apple" priority={true} width={300} height={300} />
+                <div className='text-center mt-4 text-lg font-mono'> <p>A surprise visit by Tim Cook</p><p className='text-sm'> @Apple Store Covent Garden</p> </div> 
+            </div>
+              <div className='flex flex-col sm:flex-row font-bold'>
+                <p className="text-xl  text-cyan-700">   Apple Store London <span className="text-lg text-gray-600"> - Sales Specialist</span></p> 
+              </div>
+            </div>
+            <span>London, UK 2018 </span>
           </div>
-            <div className="text-[16px]">
+            <div className="ml-2 text-[16px]">
              <p>My journey began at the Apple Store in London, where <span className="font-bold">I explained technology using simple language and analogies. </span>
               By simplifying complex ideas for customers, I set the stage for my future in tech.</p>
             </div>
