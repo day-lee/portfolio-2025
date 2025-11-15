@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     siteName: 'Dayeon Lee',
     images: [
       {
-        url: 'http://github.com/day-lee/portfolio-2025/blob/main/public/apple.jpg',
+        url: 'https://github.com/day-lee/portfolio-2025/blob/3bdf4bd59aa67767d7d318ae5c9fa570b7bc59a7/public/apple.jpg?raw=true',
         width: 1200,
         height: 630,
         alt: 'Portfolio Preview',
