@@ -353,7 +353,7 @@ export default function Home() {
                 <div className='text-center mt-4 text-lg font-mono'> <p>Working hard :)</p> <p className='text-sm'>@ Bubblecon Seoul office</p> </div>  
             </div>
               <div className='flex flex-col sm:flex-row font-bold'>
-                <p className="text-xl  text-cyan-700"> Bubblecon <span className="text-lg text-gray-600"> - Software Engineer</span></p> 
+                <p className="text-xl  text-cyan-700"> Bubblecon Edtech Co.<span className="text-lg text-gray-600"> - Software Engineer</span></p> 
               </div>
             </div>
             <span> Seoul, Korea 2021 - 2024 </span>
