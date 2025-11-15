@@ -36,7 +36,7 @@ export default function Home() {
       </h1>
       <p className="text-2xl text-gray-700">
         <span className="text-cyan-700 font-semibold"> Full-stack Software Engineer </span> 
-        <span className="text-black">optimising user experiences and system performance for 10,000+ monthly active users, bringing sales and marketing perspective to technical solutions.</span>
+        <span className="text-black">optimised user experiences and system performance for 10,000+ monthly active users, bringing sales and marketing perspective to technical solutions.</span>
       </p>
     </section>
     <section className="w-full bg-white mb-16">
