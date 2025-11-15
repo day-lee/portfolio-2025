@@ -356,7 +356,7 @@ export default function Home() {
                 <p className="text-xl  text-cyan-700"> Bubblecon Edtech Co.<span className="text-lg text-gray-600"> - Software Engineer</span></p> 
               </div>
             </div>
-            <span> Seoul, Korea 2021 - 2024 </span>
+            <span> Seoul, Korea 2021 - 2024 </span> 
           </div>
             <div className="ml-2 text-[16px]">
                <p>As a self-taught developer, I switched my career from digital marketing to software engineering. </p> 

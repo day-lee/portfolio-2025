@@ -15,6 +15,21 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Dayeon Lee",
   description: "Software Engineer portfolio website for Dayeon Lee 2025",
+  openGraph: {
+    title: 'Dayeon Lee',
+    description: 'Software Engineer portfolio website for Dayeon Lee 2025',
+    url: 'https://portfolio-2025-rho-rouge.vercel.app/',
+    siteName: 'Dayeon Lee',
+    images: [
+      {
+        url: 'http://github.com/day-lee/portfolio-2025/blob/main/public/apple.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Portfolio Preview',
+      },
+    ],
+    type: 'website',
+  },  
 };
 
 export default function RootLayout({
