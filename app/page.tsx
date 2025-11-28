@@ -139,7 +139,7 @@ export default function Home() {
             </div>
           <div className="mx-2 my-4 p-4">
             <div className="flex justify-between items-center mb-4">
-              <h3 className="text-xl font-bold text-gray-900">Solo Sync - Hackaton Project</h3>
+              <h3 className="text-xl font-bold text-gray-900">Solo Sync - Hackathon Project</h3>
               <p className="mr-4">2025</p>
             </div>
             <div className="font-sans text-[16px] max-w-full h-36">
